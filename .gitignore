@@ -214,3 +214,6 @@ gradle-app.setting
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,windows,java,gradle,intellij+all
+
+.java-version
+run-*.sh

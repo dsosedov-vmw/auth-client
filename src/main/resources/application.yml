@@ -3,13 +3,13 @@ spring:
     oauth2:
       client:
         registration:
-          local-sas:
-            provider: local-sas
-            client-id: messaging-client
-            client-secret: secret
+          auth-client:
+            provider: auth-server
+            client-id: ${CLIENT_ID}
+            client-secret: ${CLIENT_SECRET}
             authorization-grant-type: authorization_code
-            redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc"
+            redirect-uri: http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc
             scope: openid
         provider:
-          local-sas:
-            issuer-uri: http://auth-server:9000
+          auth-server:
+            issuer-uri: ${ISSUER_URI}
